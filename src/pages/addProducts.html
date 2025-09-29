@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="../style.css">
     <title>Add Products</title>
 </head>
+
 <body>
     <header>
         <h1>Add Products</h1>
@@ -14,7 +16,49 @@
             <span class="capitalize" id="name-storage"></span>
             <span class="lowercase" id="email-storage"></span>
         </div>
+        <button id="btn-logout">Logout</button>
     </header>
+
+    <form>
+        <label for="product-name">
+            Nome:
+            <input type="text" id="product-name" placeholder="Ex.: Arroz" required>
+        </label>
+        <label for="product-price">
+            Preço:
+            <input type="text" id="product-price" placeholder="Ex.: 4.90 " required>
+        </label>
+        <label for="product-category">
+            Categoria:
+            <select name="category" id="product-category" required>
+                <option value="" selected></option>
+                <option value="Eletrônicos">Eletrônicos</option>
+                <option value="Moda e Vestuário">Moda e Vastuário</option>
+                <option value="Alimentos e Bebidas">Alimentos e Bebidas</option>
+                <option value="Casa e Decoração">Casa e Decoração</option>
+                <option value="Saúde e Beleza">Saúde e Beleza</option>
+                <option value="Livros e Mídia">Livros e Mídia</option>
+                <option value="Esportes e Lazer">Esportes e Lazer</option>
+                <option value="Outros">Outros</option>
+            </select>
+        </label>
+        <label for="product-origin">
+            Origem:
+            <input type="text" placeholder="Ex.: Argentina" required>
+        </label>
+        <label for="product-batch">
+            Lote:
+            <input type="text" id="product-batch" placeholder="Lote do produto" required>
+        </label>
+        <label for="product-validity">
+            Data de Validade:
+            <input type="date" name="" id="" required>
+        </label>
+        <button id="register">Cadastrar</button>
+    </form>
+
+    <button id="page-view-registered-products">Ver produtos cadastrados</button>
     <script src="../scripts/addProducts.js"></script>
 </body>
+
 </html>
