@@ -20,11 +20,11 @@ btnEnter.addEventListener("click", (e) => {
   
   const dataLogin = { name:userName.value, email:email.value };
   
-  const register = JSON.parse(localStorage.getItem("dataLogin")) || [];
+  const registerLogin = JSON.parse(localStorage.getItem("dataLogin")) || [];
   
-  register.push(dataLogin);
+  registerLogin.push(dataLogin);
   
-  localStorage.setItem("dataLogin", JSON.stringify(register));
+  localStorage.setItem("dataLogin", JSON.stringify(registerLogin));
   
   window.location.href = "./src/pages/addProducts.html";
   
