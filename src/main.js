@@ -28,6 +28,8 @@ btnEnter.addEventListener("click", (e) => {
   register.push(dataLogin);
   console.log(register);
   
+  window.location.href = "./src/pages/addProducts.html";
+  
   userName.value = "";
   email.value = "";
 });
