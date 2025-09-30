@@ -1,1 +1,33 @@
 console.log("Running, Product Registration!");
+
+const formLogin = document.getElementById("form-login");
+
+const userName = document.getElementById("username");
+const email = document.getElementById("email");
+
+const btnEnter = document.getElementById("btn-enter");
+
+
+btnEnter.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  if (localStorage.key("dataLogin")) { localStorage.removeItem("dataLogin"); };
+
+  if (userName.value === "" || email.value === "") {
+    alert("Por favor, preencha os campos com nome e e-mail para poder logar!");
+    return;
+  }
+  
+  const dataLogin = { name:userName.value, email:email.value };
+  
+  const registerLogin = JSON.parse(localStorage.getItem("dataLogin")) || [];
+  
+  registerLogin.push(dataLogin);
+  
+  localStorage.setItem("dataLogin", JSON.stringify(registerLogin));
+  
+  window.location.href = "./src/pages/addProducts.html";
+  
+  const form = document.getElementById("form-login");
+  form.reset();
+});

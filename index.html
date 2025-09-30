@@ -1,12 +1,29 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product Registration</title>
-  </head>
-  <body>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/src/style.css">
+  <title>Product Registration</title>
+</head>
+
+<body>
+  <header>
+    <h1>Login</h1>
+  </header>
+  <form id="form-login">
+    <label for="username">
+      Nome:
+      <input type="text" id="username" placeholder="nome do usuário" required />
+    </label>
+    <label for="email">
+      E-mail:
+      <input type="text" id="email" placeholder="email" required />
+    </label>
+    <button type="submit" id="btn-enter">Entrar</button>
+  </form>
+  <script type="module" src="/src/main.js"></script>
+</body>
 </html>
