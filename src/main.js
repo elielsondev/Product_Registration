@@ -28,6 +28,6 @@ btnEnter.addEventListener("click", (e) => {
   
   window.location.href = "./src/pages/addProducts.html";
   
-  userName.value = "";
-  email.value = "";
+  const form = document.getElementById("form-login");
+  form.reset();
 });
